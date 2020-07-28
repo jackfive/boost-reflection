@@ -6,6 +6,8 @@ cmake_minimum_required(VERSION 2.8.8)
 
 # import modules
 include(FindThreads)
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
 
 # Version of the source code
 set(BOOST_REFLECTION_VERSION_MAJOR 1 CACHE PATH "BOOST_REFLECTION MAJOR VERSION")
@@ -67,8 +69,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # Location for the source code
 add_subdirectory(libs/reflection/src)
-add_subdirectory(libs/reflection/test)
-add_subdirectory(libs/reflection/example)
+#add_subdirectory(libs/reflection/test)
+#add_subdirectory(libs/reflection/example)
 
 # packaging
 set(CPACK_PACKAGE_VERSION_MAJOR ${BOOST_REFLECTION_VERSION_MAJOR})
