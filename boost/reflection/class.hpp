@@ -807,7 +807,7 @@ public:
     {
         TypeInfoArray tArray;
         BOOST_FOREACH(boost::any& arg, args) {
-            tArray.push_back(cref(arg.type()));
+            tArray.push_back(boost::cref(arg.type()));
         }
         Constructor c = getConstructor(tArray);
         return c.newInstance(args);
@@ -887,7 +887,7 @@ public:
     {
         TypeInfoArray tArray;
         BOOST_FOREACH(const boost::any& arg, args) {
-            tArray.push_back(cref(arg.type()));
+            tArray.push_back(boost::cref(arg.type()));
         }
         Method m = getMethod(methodName, tArray);
         return m.invoke(obj, args);
@@ -897,7 +897,7 @@ public:
     {
         TypeInfoArray tArray;
         BOOST_FOREACH(const boost::any& arg, args) {
-            tArray.push_back(cref(arg.type()));
+            tArray.push_back(boost::cref(arg.type()));
         }
         Method m = getStaticMethod(methodName, tArray);
         return m.invokeStatic(args);
@@ -1070,7 +1070,7 @@ private:
         const std::list<Interface>& interfaces, const std::list<boost::any>& annotations,
         ProxyCreator* proxyCreator)
         : AnnotationBase(annotations), name_(name), ptrTypeName_(ptrTypeName),
-          typeInfo_(cref(typeInfo)), destructor_(dtors), proxyCreator(proxyCreator)
+          typeInfo_(boost::cref(typeInfo)), destructor_(dtors), proxyCreator(proxyCreator)
     {
         //initialize the constructor db
         constructorDb = new constructor_db_t;

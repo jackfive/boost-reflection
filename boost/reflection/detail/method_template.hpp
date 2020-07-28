@@ -33,7 +33,7 @@
 #define BOOST_REFL_CAST_ARGTYPE_FOR_CHECK(z, n, text) BOOST_REFL_CAST_ARGTYPE(z,n,text);
 
 #define BOOST_REFL_CONSTRUCT_ARGTYPE_ARRAY(z, n, array) \
-        array.push_back(cref(typeid(BOOST_REFL_ARGTYPE_REAL_TYPEDEF_NAME(n))));
+        array.push_back(boost::cref(typeid(BOOST_REFL_ARGTYPE_REAL_TYPEDEF_NAME(n))));
 
 #define BOOST_REFL_ARGTYPE_TYPEDEF_DECLARE(z, n, text) \
         typedef typename BOOST_REFL_ARGTYPE_NAME(~, n, ~) BOOST_REFL_ARGTYPE_TYPEDEF_NAME(~, n, ~);
