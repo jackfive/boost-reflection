@@ -37,13 +37,13 @@ if(${UNIX})
 
     # compile flags for release mode
     set(my_ssp_cflags "-fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2")
-    set(CMAKE_C_FLAGS_RELEASE "-march=i686 -mtune=generic -O2 -pipe ${my_ssp_cflags} -Wall -g -DNDEBUG -DBOOST_DISABLE_ASSERTS")
+    set(CMAKE_C_FLAGS_RELEASE "-march=x86-64 -mtune=generic -O2 -pipe ${my_ssp_cflags} -Wall -g -DNDEBUG -DBOOST_DISABLE_ASSERTS")
     mark_as_advanced(CMAKE_C_FLAGS_RELEASE)
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}")
     mark_as_advanced(CMAKE_CXX_FLAGS_RELEASE)
 
     # compile flags for debug mode
-    set(CMAKE_C_FLAGS_DEBUG "-march=i686 -mtune=generic -O0 -pipe -Wall -g")
+    set(CMAKE_C_FLAGS_DEBUG "-march=x86-64 -mtune=generic -O0 -pipe -Wall -g")
     mark_as_advanced(CMAKE_C_FLAGS_DEBUG)
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
     mark_as_advanced(CMAKE_CXX_FLAGS_DEBUG)
