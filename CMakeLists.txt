@@ -6,8 +6,8 @@ cmake_minimum_required(VERSION 2.8.8)
 
 # import modules
 include(FindThreads)
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+#include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+#conan_basic_setup()
 
 # Version of the source code
 set(BOOST_REFLECTION_VERSION_MAJOR 1 CACHE PATH "BOOST_REFLECTION MAJOR VERSION")
