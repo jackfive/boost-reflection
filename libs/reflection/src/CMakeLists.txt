@@ -1,7 +1,7 @@
 # Name of the subproject
 project("reflection_library")
 
-add_library(libreflection SHARED class.cpp)
+add_library(libreflection class.cpp)
 
 # Avoid the liblib name, and set the version
 set_target_properties(libreflection PROPERTIES 
