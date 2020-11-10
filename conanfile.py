@@ -31,7 +31,7 @@ class BoostReflectionConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
-        cmake.configure()
+        cmake.configure(source_folder="boost-reflection", build_folder="build")
         cmake.build()
 
     def package(self):        
