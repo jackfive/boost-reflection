@@ -23,7 +23,7 @@ find_package(Boost 1.36.0)
 find_package(Threads)
 
 if(NOT Boost_FOUND)
-    message(FATAL_ERROR "boost not found!")
+    MESSAGE(FATAL_ERROR "boost not found!")
 endif()
 
 # install paths

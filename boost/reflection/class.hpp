@@ -107,7 +107,7 @@ typedef std::vector<TypeInfoRef> TypeInfoArray;
 struct exc : public std::exception { \
     const char* what() const throw() \
     { \
-        return "boost::reflection::"BOOST_STRINGIZE(exc); \
+        return "boost::reflection::" BOOST_STRINGIZE(exc); \
     } \
     ~exc() throw() {} \
 };
