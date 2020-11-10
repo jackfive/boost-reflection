@@ -1,1 +1,7 @@
 /build
+conan.lock
+conanbuildinfo.cmake
+conanbuildinfo.txt
+conaninfo.txt
+graph_info.json
+.vscode/.conan_tools/conanInfo.dot
