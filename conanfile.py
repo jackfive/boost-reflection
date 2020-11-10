@@ -35,7 +35,7 @@ class BoostReflectionConan(ConanFile):
         cmake.build()
 
     def package(self):        
-        self.copy("*", src="boost", dst="include/boost", keep_path=True)
+        self.copy("*", src="boost-reflection/boost", dst="include/boost", keep_path=True)
         self.copy("*.a", dst="lib", src="build/libs/reflection/src", keep_path=False)
         self.copy("*.so", dst="lib", src="build/libs/reflection/src", keep_path=False)
 
