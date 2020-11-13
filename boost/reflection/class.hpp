@@ -953,7 +953,9 @@ public:
         delete fieldDb;
         delete interfaceDb;
         delete proxyCreator;
+#ifdef DEBUG
         std::cout << "META-DATA FINALIZE class=" << name_ << std::endl;
+#endif
     }
 public:
     std::string getName() const
